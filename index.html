@@ -83,13 +83,13 @@
 							<p style='margin-bottom: 20px; margin-top: 10px; color: grey'>Dashboard umpan balik dari masyarakat Sulawesi Tengah ini, diterima dari berbagai lembaga kemanusiaan yang terlibat dalam Kelompok Kerja Pelibatan Masyarakat dan Akuntabilitas Sulawesi Tengah. Dashboard ini dirancang untuk membantu lembaga ataupun pekerja kemanusiaan membuat keputusan dan menyesuaikan program dengan memberikan wawasan tentang apa yang disampaikan masyarakat Sulawesi Tengah.</p>
 						</div>
 						<div class="col-sm" style="margin-bottom: 20px">
-							<font class="tdtit"><h3>Key Figures</h3></font>
+							<font class="tdtit"><h3>Jumlah Pemberi Umpan Balik</h3></font>
 						</div>
 					</div>
 
 					<div class="col-md-12">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-3">
 								<table  style="float:left margin">
 									<tr>
 										<th rowspan="3">
@@ -99,7 +99,7 @@
 									</tr>
 									<tr>
 										<td >
-											<font class='panelTitleBold' style="font-size: 14px; padding-left: 20px">Jumlah Responder</font>
+											<font class='panelTitleBold' style="font-size: 14px; padding-left: 20px">Interaksi</font>
 										</td>
 									</tr>
 								</table>
@@ -134,11 +134,11 @@
 									</tr>
 								</table>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-2.5">
 								<table  style="float:left margin">
 									<tr>
 										<th rowspan="2"> 
-											<img style="height: 75px; padding-left:15px" class="img-responsive; center" src='images/boys.png'>
+											<img style="height: 75px; padding-left:30px" class="img-responsive; center" src='images/boys.png'>
 											<td style="padding-left:20px; color :grey"; class="thevaluedata"; id="kfa4"></td>
 										</th>
 									</tr>
@@ -149,11 +149,11 @@
 									</tr>
 								</table>
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-2.5">
 								<table  style="float:left margin">
 									<tr>
 										<th rowspan="2"> 
-											<img style="height: 75px; padding-left:15px" class="img-responsive; center" src='images/girl.png'>
+											<img style="height: 75px; padding-left:20px" class="img-responsive; center" src='images/girl.png'>
 											<td style="padding-left:20px; color :grey"; class="thevaluedata"; id="kfa5"></td>
 										</th>
 									</tr>
@@ -244,7 +244,7 @@
 					<div class="col-md-12">
 						<table width = '100%'>
 							<tr>
-								<td align='left'; valign='top'><img style="height: 100%; margin-top: 0px; padding-left: 15px"; class="img-responsive hdx" src='images/support.png'></td>
+								<td align='left'; valign='top'><img style="height: 70%; margin-top: 0px; padding-left: 15px"; class="img-responsive hdx" src='images/support.png'></td>
 								<!-- <a target="_blank" href="https://data.humdata.org"> -->
 								<td align='right'; valign='top'><img style="height: 60%; margin-top: 15px; padding-right: 15px"; class="img-responsive hdx" src='images/poweredby.png'></td>
 							</tr>
@@ -588,8 +588,8 @@
 		    						z['saluran_umpan_balik'],
 		    						z['status'],
 		    						// z['Complaint Category'],
-		    						// z['Kabupaten/kota'],
-		    						// z['Kecamatan'],
+		    						z['Kabupaten/kota'],
+		    						z['Kecamatan'],
 		    						// z['Desa/posko/huntara'],
 		    						// z['LAT'],
 		    						// z['LON'],
@@ -603,14 +603,14 @@
 		    			data: datatblfor,
 				        columns: [
 				            // { title: "Periode_laporan" },
-				            { title: "org"},
-				            { title: "sector" },
-				            { title: "kategory_ub" },
-				            { title: "saluran_umpan_balik" },
-				            { title: "status" },
+				            { title: "Organisasi"},
+				            { title: "Sektor" },
+				            { title: "Kategory umpan balik" },
+				            { title: "Saluran umpan balik" },
+				            { title: "Status" },
 				            // { title: "Complaint Category" },
-				            // { title: "Kabupaten/kota" },
-				            // { title: "Kecamatan" },
+				            { title: "Kabupaten/Kota" },
+				            { title: "Kecamatan" },
 				            // { title: "Desa/posko/huntara" },
 				            // { title: "LAT"},
 				            // { title: "LON" },
