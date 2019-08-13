@@ -242,7 +242,7 @@
 					<div class="col-md-12">
 						<table width = '100%'>
 							<tr>
-								<td align='left'; valign='top'><img style="height: 70%; margin-top: 0px; padding-left: 15px"; class="img-responsive hdx" src='images/support-v2.png'></td>
+								<td align='left'; valign='top'><img style="height: 80%; margin-top: 0px; padding-left: 15px"; class="img-responsive hdx" src='images/support-v2.png'></td>
 								<!-- <a target="_blank" href="https://data.humdata.org"> -->
 								<td align='right'; valign='top'><img style="height: 60%; margin-top: 15px; padding-right: 15px"; class="img-responsive hdx" src='images/poweredby.png'></td>
 							</tr>
@@ -408,6 +408,11 @@
 						  redrawbasestat(data[sel+1][0]);
 					  	});
 						}
+					setTimeout(function(){
+						$('#datatable_filter label').contents().first().replaceWith('Pencarian (berdasarkan nilai di kolom table)');
+						$('input[type="search"]').attr('placeholder','contoh: Palu');
+						
+					},1500)
 		    	}
 
 		  // BarChart1 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -607,7 +612,7 @@
 				            { title: "Saluran umpan balik" },
 				            { title: "Status" },
 				            // { title: "Complaint Category" },
-				            { title: "Kabupaten/Kota" },
+				            { title: "Kabupaten/ Kota" },
 				            { title: "Kecamatan" },
 				            // { title: "Desa/posko/huntara" },
 				            // { title: "LAT"},
