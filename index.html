@@ -438,7 +438,7 @@
 					    }
 						}
 						thedata.sort(sortFunction);
-						thedata.unshift(['sector', 'Total']);		
+						thedata.unshift(['', 'Total']);		
 
 		    		// Load google charts
 						google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -449,19 +449,22 @@
 						  // Optional; add a title and set the width and height of the chart
 						  var options = {
 					      	colors:['#cf1207'],
-					        
+					      	legend: 'none',
+
 					        hAxis: {
-					          title: 'Sectors',
+					          title: '',
 					          minValue: 0
+					          
 					        },
 					        vAxis: {
-					          // title: 'Sectors'
+					          title: '',
 					          textStyle:{
-					          	fontSize:10
+					          	fontSize:0
 					          }
 					        },
 					        legend: { position: "none" },
 					        bars: 'horizontal',
+
 					        annotations: {
 					          alwaysOutside: true,
 					          textStyle: {
@@ -469,6 +472,16 @@
 					            auraColor: 'none',
 					            color: '#555'
 					          },
+					          boxStyle: {
+					            stroke: '#ccc',
+					            strokeWidth: 1,
+					            gradient: {
+					              color1: '#f3e5f5',
+					              color2: '#f3e5f5',
+					              x1: '0%', y1: '0%',
+					              x2: '100%', y2: '100%'
+					            }
+					          }
 					        },
 					        animation:{
 						        duration: 1000,
@@ -480,7 +493,11 @@
 					  // Display the chart inside the <div> element with id="piechart"
 					  var chart = new google.charts.Bar(document.getElementById('sector_report'));
         		      chart.draw(data, options);
-					  }
+        		      google.visualization.events.addListener(chart, 'select', function() {
+						  var sel = chart.getSelection()[0].row;
+						  redrawbasesector(data[sel+1][0]);
+					  });
+					}
 		    	}
 
 		    // BarChart2 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -501,7 +518,7 @@
 					    }
 						}
 						thedata.sort(sortFunction);
-						thedata.unshift(['saluran_umpan_balik', 'Total']);		
+						thedata.unshift(['', 'Total']);		
 
 		    		// Load google charts
 						google.charts.load('current', {packages: ['corechart', 'bar']});
@@ -807,7 +824,7 @@
 							$('#kfa'+i).html(data[0][x]);
 							i+=1;
 						}
-						console.log(data);
+						// console.log(data);
 					})
 
 					//SANKEY-----------------------------------------
