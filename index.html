@@ -815,7 +815,7 @@
 
 					// KEY FEATURE------------------------------------
 
-					d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vRRh12N2Ty9QVRbPVtQ9vnMZr79g9TW1MOYZLAfppPWh9-gRzes0RPP2TQcU-ts8HUbf83zZwnY_aV8/pub?output=csv',function(data){
+					d3.csv('./data/key_figure.csv',function(data){
 						let numberformat = d3.format(",d");
 						let i = 1;
 						for(x in data[0]){
@@ -829,7 +829,7 @@
 
 					//SANKEY-----------------------------------------
 
-					d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vShhH0xK1KsFunYHsWTIBkFi0HgINQe0WPsP11gWJSQ5jK1OV9BvskLj6gia_2c-4pJy8Uhb4tp_QkA/pub?output=csv',function(data){
+					d3.csv('./data/bhs_cewg_sulteng_final.csv',function(data){
 						gv_allthedata = data;
 						gv_period = [];
 						data.forEach(function(d){
